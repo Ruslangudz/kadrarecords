@@ -43,7 +43,7 @@
     }
     nav a:hover{ opacity:1; transform:translateY(-2px); color:var(--accent) }
 
-    /* Кнопка входа */
+    /* Кнопка входа в хедере */
     #loginBtn {
       background: var(--accent);
       border: none;
@@ -53,8 +53,34 @@
       font-weight: 700;
       cursor: pointer;
       transition: background-color 0.2s ease;
+      z-index: 1100;
     }
     #loginBtn:hover {
+      background: #e04343;
+    }
+
+    /* Кнопка входа внизу для мобильных */
+    #loginBtnBottom {
+      display: none;
+      position: fixed;
+      bottom: 15px;
+      right: 15px;
+      background: var(--accent);
+      border: none;
+      padding: 14px 18px;
+      border-radius: 50%;
+      color: #fff;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(255,82,82,0.7);
+      transition: background-color 0.2s ease;
+      z-index: 1500;
+      font-size: 18px;
+      line-height: 1;
+      text-align: center;
+      user-select: none;
+    }
+    #loginBtnBottom:hover {
       background: #e04343;
     }
 
@@ -242,7 +268,10 @@
         font-size: 14px;
       }
       #loginBtn {
-        display: none; /* Скрываем кнопку входа на мобильных */
+        display: none; /* Скрываем кнопку входа в хедере на мобилках */
+      }
+      #loginBtnBottom {
+        display: block; /* Показываем кнопку входа внизу на мобилках */
       }
       .hero {
         padding: 32px 5%;
@@ -384,6 +413,8 @@
     </div>
   </footer>
 
-  <!-- Модалка входа -->
-  <div id="loginModal">
-    <div class="modal-content
+  <!-- Кнопка входа внизу на мобилках -->
+  <button id="loginBtnBottom" aria-label="Вход">Вход</button>
+
+</body>
+</html>
