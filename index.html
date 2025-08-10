@@ -43,6 +43,21 @@
     }
     nav a:hover{ opacity:1; transform:translateY(-2px); color:var(--accent) }
 
+    /* Кнопка входа */
+    #loginBtn {
+      background: var(--accent);
+      border: none;
+      padding: 8px 18px;
+      border-radius: 6px;
+      color: #fff;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+    #loginBtn:hover {
+      background: #e04343;
+    }
+
     .hero{
       min-height: calc(100vh - 72px);
       margin-top:72px;
@@ -164,6 +179,9 @@
       nav a {
         font-size: 14px;
       }
+      #loginBtn {
+        display: none; /* Скрываем кнопку входа на мобильных */
+      }
       .hero {
         padding: 32px 5%;
         min-height: auto;
@@ -209,6 +227,9 @@
       nav a {
         font-size: 13px;
       }
+      #loginBtn {
+        max-width: 100%;
+      }
       .hero h1 {
         font-size: 24px;
       }
@@ -228,7 +249,7 @@
       <a href="#tracks">Работы</a>
       <a href="#contact">Контакты</a>
     </nav>
-    <!-- Кнопка входа убрана -->
+    <button id="loginBtn">Вход</button>
   </header>
 
   <section class="hero" role="region" aria-label="Главный баннер">
@@ -270,9 +291,15 @@
     <section id="tracks" style="margin-top:48px;">
       <h2 style="color:var(--accent); text-align:center;">Наши работы</h2>
       <div style="max-width:900px; margin:18px auto;">
-        <iframe width="100%" height="166" scrolling="no" frameborder="no"
-          src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1534488977&color=%23ff5500" 
-          style="border-radius:8px; box-shadow: 0 8px 20px rgba(0,0,0,0.4)"></iframe>
+        <!-- Вставлен SoundCloud плейлист -->
+        <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay"
+          src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/2064145701&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+          style="border-radius:8px; box-shadow: 0 8px 20px rgba(0,0,0,0.4)">
+        </iframe>
+        <div style="font-size: 10px; color: #cccccc; line-break: anywhere; word-break: normal; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif; font-weight: 100;">
+          <a href="https://soundcloud.com/kadra-records-595003294" title="Kadra Records" target="_blank" style="color: #cccccc; text-decoration: none;">Kadra Records</a> · 
+          <a href="https://soundcloud.com/kadra-records-595003294/sets/kadra-prod-sale" title="KADRA prod. SALE" target="_blank" style="color: #cccccc; text-decoration: none;">KADRA prod. SALE</a>
+        </div>
       </div>
     </section>
 
@@ -301,7 +328,15 @@
     </div>
   </footer>
 
-  <!-- Модалка входа удалена -->
+  <!-- Модалка входа -->
+  <div id="loginModal">
+    <div class="modal-content">
+      <!-- Контент модалки сюда, если нужен -->
+    </div>
+  </div>
 
+  <script>
+    // Логика модалки, если будет
+  </script>
 </body>
 </html>
