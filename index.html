@@ -147,49 +147,6 @@
       background:transparent;
     }
 
-    /* Новый блок клиенты и услуги */
-    .clients-services {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 20px;
-      background: var(--card);
-      border-radius: 12px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.4);
-      color: rgba(255,255,255,0.9);
-      font-size: 16px;
-      line-height: 1.5;
-    }
-    .clients-services h2 {
-      color: var(--accent);
-      margin-bottom: 18px;
-      text-align: center;
-      font-weight: 700;
-    }
-    .clients-services ul {
-      list-style: none;
-      padding: 0;
-      margin: 0 0 16px 0;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px 16px;
-      font-weight: 600;
-      color: var(--white);
-    }
-    .clients-services ul li {
-      background: rgba(255,255,255,0.1);
-      padding: 6px 12px;
-      border-radius: 8px;
-      white-space: nowrap;
-    }
-    .clients-services p {
-      max-width: 700px;
-      margin: 0 auto;
-      text-align: center;
-      color: rgba(255,255,255,0.85);
-      font-weight: 500;
-    }
-
     /* Уже есть, улучшим и добавим */
 
     @media (max-width: 1024px) {
@@ -257,16 +214,6 @@
         font-size: 14px;
         text-align: center;
       }
-      .clients-services ul {
-        justify-content: center;
-        gap: 8px 12px;
-        font-size: 13px;
-      }
-      .clients-services p {
-        font-size: 14px;
-        max-width: 100%;
-        padding: 0 10px;
-      }
     }
 
     /* Очень маленькие экраны */
@@ -330,24 +277,15 @@
           <p>От идеи и демо до релиза — аранжировка, звук и сопровождение.</p>
         </div>
       </div>
-    </section>
 
-    <section class="clients-services">
-      <h2>Наши клиенты и услуги</h2>
-      <ul>
-        <li>Tkimali</li>
-        <li>Mekhman</li>
-        <li>Ганвест</li>
-        <li>Flexx</li>
-        <li>Каграманов</li>
-        <li>kommo</li>
-        <li>Ирина Тонева</li>
-        <li>Ирина Ортман</li>
-        <li>Юлия Самойлова (Eurovision 2019)</li>
-        <li>и другие</li>
-      </ul>
-      <p>Мы всегда рады новым клиентам и тем, кто серьёзно относится к своей музыкальной карьере.<br>
-      Также занимаемся продюсерской деятельностью, дистрибуцией и продвижением артистов и песен на музыкальных площадках.</p>
+      <div style="margin-top:28px;">
+        <h3 style="color:var(--accent);">Локации студий</h3>
+        <div class="locations">
+          <div class="loc"><strong>Москва</strong><br>Центральная студия — полнофункциональный контроль-рум и вокальная кабина.</div>
+          <div class="loc"><strong>Бали</strong><br>Резиденция для творческих сессий и атмосферных записей на природе.</div>
+          <div class="loc"><strong>Волгоград</strong><br>Локальная студия для быстрой записи и работы с исполнителями региона.</div>
+        </div>
+      </div>
     </section>
 
     <section id="tracks" style="margin-top:48px;">
@@ -379,30 +317,12 @@
       </div>
     </section>
 
-    <section id="about" style="margin-top:40px;">
-      <h2 style="color:var(--accent); text-align:center;">О студии</h2>
-      <p style="max-width:900px; margin:10px auto 0; text-align:center; color:rgba(255,255,255,0.85)">KADRA records — это команда инженеров и продюсеров, которые знают, как превратить идею в хит. Три локации — с разной атмосферой, но с одинаковым подходом к качеству и вниманию к деталям.</p>
-    </section>
-
-    <section id="contact" style="margin-top:40px;">
-      <h2 style="color:var(--accent); text-align:center;">Контакты</h2>
-      <div style="max-width:640px; margin:14px auto;">
-        <form action="mailto:hello@blackroomstudio.com" method="post" enctype="text/plain" style="display:flex;flex-direction:column;gap:10px;">
-          <input name="name" placeholder="Ваше имя" required style="padding:10px;border-radius:6px;border:none;background:#111;color:#fff;">
-          <input type="email" name="email" placeholder="Email" required style="padding:10px;border-radius:6px;border:none;background:#111;color:#fff;">
-          <textarea name="message" rows="5" placeholder="Сообщение" style="padding:10px;border-radius:6px;border:none;background:#111;color:#fff;"></textarea>
-          <button type="submit" style="padding:12px;border-radius:8px;border:none;background:var(--accent);color:#fff;font-weight:700;">Отправить</button>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div style="max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;">
-      <div>© 2025 KADRA records Studio</div>
-      <div style="opacity:0.9">Москва · Бали · Волгоград — info@blackroomstudio.com</div>
-    </div>
-  </footer>
-
-</body>
-</html>
+    <!-- Новый блок с оборудованием -->
+    <section id="equipment" style="margin-top:40px;">
+      <h2 style="color:var(--accent); text-align:center;">Оборудование студии</h2>
+      <ul style="max-width:900px; margin:14px auto; color: rgba(255,255,255,0.85); line-height:1.6; list-style: inside disc;">
+        <li>Конденсаторные микрофоны (Neumann U87, AKG C414)</li>
+        <li>Динамические микрофоны (Shure SM7B, Sennheiser e906)</li>
+        <li>Поп-фильтры и ветрозащита</li>
+        <li>Аудиоинтерфейсы высокого класса (Universal Audio Apollo, RME Fireface)</li>
+        <li>Микшер
