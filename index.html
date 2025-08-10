@@ -147,68 +147,6 @@
       background:transparent;
     }
 
-    /* Модалка для входа */
-    #loginModal {
-      display: none;
-      position: fixed;
-      z-index: 2000;
-      left: 0; top: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.7);
-      backdrop-filter: blur(3px);
-      justify-content: center;
-      align-items: center;
-    }
-    #loginModal.active {
-      display: flex;
-    }
-    .modal-content {
-      background: var(--card);
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.5);
-      width: 320px;
-      color: var(--white);
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-    .modal-content h2 {
-      margin: 0 0 20px;
-      font-weight: 700;
-      font-size: 24px;
-      text-align: center;
-    }
-    .modal-content input {
-      padding: 10px 14px;
-      border-radius: 8px;
-      border: none;
-      background: #111;
-      color: #fff;
-      font-size: 16px;
-      outline: none;
-    }
-    .modal-content button {
-      padding: 12px 0;
-      background: var(--accent);
-      border: none;
-      border-radius: 8px;
-      font-weight: 700;
-      color: #fff;
-      cursor: pointer;
-      transition: background-color 0.2s ease;
-    }
-    .modal-content button:hover {
-      background: #e04343;
-    }
-    .modal-content .cancel-btn {
-      background: #444;
-      margin-top: 8px;
-    }
-    .modal-content .cancel-btn:hover {
-      background: #555;
-    }
-
     /* Уже есть, улучшим и добавим */
 
     @media (max-width: 1024px) {
@@ -352,25 +290,31 @@
 
     <section id="tracks" style="margin-top:48px;">
       <h2 style="color:var(--accent); text-align:center;">Наши работы</h2>
-      <div style="max-width:900px; margin:18px auto;">
-        <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/2064145701&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true" style="border-radius:8px; box-shadow: 0 8px 20px rgba(0,0,0,0.4)"></iframe>
-      </div>
-    </section>
+      <div style="display:flex; gap: 20px; max-width:900px; margin:18px auto; flex-wrap: wrap; justify-content: center;">
+        
+        <div style="flex: 1 1 400px; display: flex; flex-direction: column; align-items: center;">
+          <h3 style="color:var(--accent); margin-bottom: 8px;">ПЕСНИ НА ПРОДАЖУ</h3>
+          <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/2064145701&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true&show_tracks=10"
+            style="border-radius:8px; box-shadow: 0 8px 20px rgba(0,0,0,0.4); min-height:450px;">
+          </iframe>
+          <div style="font-size: 10px; color: #cccccc; margin-top: 6px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; width: 100%; text-align: center; font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif; font-weight: 100;">
+            <a href="https://soundcloud.com/kadra-records-595003294/sets/kadra-prod-sale" target="_blank" style="color: #cccccc; text-decoration: none;">KADRA prod. SALE</a>
+          </div>
+        </div>
 
-    <!-- Вставляем новый блок с клиентами и услугами -->
-    <section id="clients" style="margin-top:40px; max-width:900px; margin-left:auto; margin-right:auto; color:rgba(255,255,255,0.85); font-size:16px; line-height:1.5;">
-      <h2 style="color: var(--accent); text-align:center; margin-bottom:20px;">Наши клиенты и услуги</h2>
-      <p style="margin-bottom:18px;">
-        Наши звукорежиссеры работали с такими артистами, как:<br />
-        <strong>Tkimali, Mekhman, Ганвест, Flexx, Каграманов, kommo, Ирина Тонева, Ирина Ортман, Юлия Самойлова (Eurovision 2019)</strong> и другие.
-      </p>
-      <p style="margin-bottom:18px;">
-        Мы всегда рады новым клиентам и тем, кто серьёзно относится к своей музыкальной карьере.<br />
-        Также занимаемся продюсерской деятельностью, дистрибуцией и продвижением артистов и песен на музыкальных площадках.
-      </p>
-      <p style="text-align:center; font-weight:700; margin-top:30px;">
-        Звоните — ответим на ваши вопросы и забронируем время в студии.
-      </p>
+        <div style="flex: 1 1 400px; display: flex; flex-direction: column; align-items: center;">
+          <h3 style="color:var(--accent); margin-bottom: 8px;">НАШИ РАБОТЫ</h3>
+          <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/595003294/tracks&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+            style="border-radius:8px; box-shadow: 0 8px 20px rgba(0,0,0,0.4); min-height:450px;">
+          </iframe>
+          <div style="font-size: 10px; color: #cccccc; margin-top: 6px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; width: 100%; text-align: center; font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif; font-weight: 100;">
+            <a href="https://soundcloud.com/kadra-records-595003294" target="_blank" style="color: #cccccc; text-decoration: none;">Kadra Records</a>
+          </div>
+        </div>
+
+      </div>
     </section>
 
     <section id="about" style="margin-top:40px;">
@@ -397,28 +341,6 @@
       <div style="opacity:0.9">Москва · Бали · Волгоград — info@blackroomstudio.com</div>
     </div>
   </footer>
-
-  <!-- Модалка входа -->
-  <div id="loginModal">
-    <div class="modal-content">
-      <!-- Контент модалки сюда -->
-    </div>
-  </div>
-
-  <script>
-    const loginBtn = document.getElementById('loginBtn');
-    const loginModal = document.getElementById('loginModal');
-
-    loginBtn.addEventListener('click', () => {
-      loginModal.classList.add('active');
-    });
-
-    loginModal.addEventListener('click', (e) => {
-      if (e.target === loginModal) {
-        loginModal.classList.remove('active');
-      }
-    });
-  </script>
 
 </body>
 </html>
