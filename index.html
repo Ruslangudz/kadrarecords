@@ -149,37 +149,50 @@
       position: relative;
     }
 
-    /* Плавающая кнопка входа (мобильная версия) */
-    #loginBtnFloat {
+    /* Нижняя "юбка" с кнопкой входа */
+    .footer-bar {
       position: fixed;
-      bottom: 24px;
-      right: 24px;
-      width: 56px;
-      height: 56px;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: var(--card);
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding: 10px 6%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      z-index: 1000;
+    }
+    .footer-bar button {
       background: var(--accent);
       border: none;
-      border-radius: 50%;
-      box-shadow: 0 0 12px rgba(255, 82, 82, 0.7);
+      padding: 10px 22px;
+      border-radius: 6px;
+      color: white;
+      font-weight: 700;
       cursor: pointer;
-      transition: box-shadow 0.3s ease, background-color 0.3s ease;
-      z-index: 1100;
-      background-image: url('data:image/svg+xml;utf8,<svg fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>');
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: 24px 24px;
+      font-size: 16px;
+      transition: background-color 0.2s ease;
     }
-    #loginBtnFloat:hover {
-      background-color: #e04343;
-      box-shadow: 0 0 20px rgba(224, 67, 67, 0.9);
+    .footer-bar button:hover {
+      background: #e04343;
     }
-    @media (min-width: 721px) {
-      /* Скрываем мобильную кнопку на больших экранах */
-      #loginBtnFloat {
+
+    /* Скрываем кнопку входа в хедере на мобильных */
+    @media (max-width: 720px) {
+      #loginBtn {
         display: none;
       }
     }
 
-    /* Адаптив */
+    /* Скрываем нижнюю кнопку на больших экранах */
+    @media (min-width: 721px) {
+      .footer-bar {
+        display: none;
+      }
+    }
+
+    /* Адаптивы для остального контента */
     @media (max-width: 1024px) {
       header {
         padding: 12px 4%;
@@ -209,9 +222,6 @@
       }
       nav a {
         font-size: 14px;
-      }
-      #loginBtn {
-        display: none; /* Скрываем кнопку входа в хедере на мобильных */
       }
       .hero {
         padding: 32px 5%;
@@ -352,8 +362,10 @@
     </div>
   </footer>
 
-  <!-- Плавающая кнопка входа -->
-  <button id="loginBtnFloat" aria-label="Вход" title="Вход"></button>
+  <!-- Нижняя кнопка входа для мобильных -->
+  <div class="footer-bar">
+    <button id="loginBtnFooter">Вход</button>
+  </div>
 
 </body>
 </html>
