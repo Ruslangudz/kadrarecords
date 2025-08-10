@@ -208,6 +208,52 @@
     .modal-content .cancel-btn:hover {
       background: #555;
     }
+
+    /* ===== Адаптив для мобилок ===== */
+    @media (max-width: 720px) {
+      header {
+        padding: 12px 5%;
+        height: auto;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .logo {
+        font-size: 18px;
+        margin-bottom: 12px;
+        width: 100%;
+        text-align: center;
+        letter-spacing: 0.5px;
+      }
+      nav {
+        width: 100%;
+        justify-content: center;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+      nav a {
+        font-size: 14px;
+        padding: 6px 10px;
+      }
+      #loginBtn {
+        margin-top: 12px;
+        width: 100%;
+        max-width: 220px;
+        padding: 10px 0;
+        font-size: 16px;
+        border-radius: 8px;
+        display: block;
+        cursor: pointer;
+      }
+      .hero h1 {
+        font-size: clamp(20px, 6vw, 32px);
+        line-height: 1.2;
+      }
+      .hero p {
+        font-size: clamp(12px, 4vw, 16px);
+        line-height: 1.4;
+        margin-bottom: 32px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -330,7 +376,7 @@
 
       if(email === adminEmail && pass === adminPass) {
         alert('Добро пожаловать, Администратор!');
-        window.location.href = 'admin.html'; // путь к админке, файл должен быть рядом
+        window.location.href = '/admin.html'; // путь к админке, создай эту страницу
       } else {
         alert('Неверный логин или пароль');
       }
