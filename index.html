@@ -59,26 +59,25 @@
       background: #e04343;
     }
 
-    /* Кнопка входа внизу для мобильных */
+    /* Квадратная кнопка входа внизу (нефиксированная) */
     #loginBtnBottom {
       display: none;
-      position: fixed;
-      bottom: 15px;
-      right: 15px;
+      margin: 40px auto 20px auto;
+      width: 48px;
+      height: 48px;
       background: var(--accent);
       border: none;
-      padding: 14px 18px;
-      border-radius: 50%;
+      border-radius: 6px;
       color: #fff;
       font-weight: 700;
       cursor: pointer;
       box-shadow: 0 4px 12px rgba(255,82,82,0.7);
       transition: background-color 0.2s ease;
-      z-index: 1500;
-      font-size: 18px;
-      line-height: 1;
+      font-size: 16px;
+      line-height: 48px;
       text-align: center;
       user-select: none;
+      display: block; /* показываем по умолчанию, дальше в медиа отключим */
     }
     #loginBtnBottom:hover {
       background: #e04343;
@@ -271,7 +270,7 @@
         display: none; /* Скрываем кнопку входа в хедере на мобилках */
       }
       #loginBtnBottom {
-        display: block; /* Показываем кнопку входа внизу на мобилках */
+        display: block; /* Показываем кнопку внизу на мобилках */
       }
       .hero {
         padding: 32px 5%;
@@ -404,17 +403,6 @@
         </form>
       </div>
     </section>
-  </main>
 
-  <footer>
-    <div style="max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;">
-      <div>© 2025 KADRA records Studio</div>
-      <div style="opacity:0.9">Москва · Бали · Волгоград — info@blackroomstudio.com</div>
-    </div>
-  </footer>
-
-  <!-- Кнопка входа внизу на мобилках -->
-  <button id="loginBtnBottom" aria-label="Вход">Вход</button>
-
-</body>
-</html>
+    <!-- Квадратная кнопка входа внизу, мобильная -->
+    <button id="loginBtn
