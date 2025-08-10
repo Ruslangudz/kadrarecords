@@ -43,21 +43,6 @@
     }
     nav a:hover{ opacity:1; transform:translateY(-2px); color:var(--accent) }
 
-    /* Кнопка входа в хедере */
-    #loginBtn {
-      background: var(--accent);
-      border: none;
-      padding: 8px 18px;
-      border-radius: 6px;
-      color: #fff;
-      font-weight: 700;
-      cursor: pointer;
-      transition: background-color 0.2s ease;
-    }
-    #loginBtn:hover {
-      background: #e04343;
-    }
-
     .hero{
       min-height: calc(100vh - 72px);
       margin-top:72px;
@@ -145,54 +130,10 @@
       color:rgba(255,255,255,0.7);
       border-top:1px solid rgba(255,255,255,0.03);
       background:transparent;
-      text-align: center;
-      position: relative;
     }
 
-    /* Нижняя "юбка" с кнопкой входа */
-    .footer-bar {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      background: var(--card);
-      border-top: 1px solid rgba(255,255,255,0.1);
-      padding: 10px 6%;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      z-index: 1000;
-    }
-    .footer-bar button {
-      background: var(--accent);
-      border: none;
-      padding: 10px 22px;
-      border-radius: 6px;
-      color: white;
-      font-weight: 700;
-      cursor: pointer;
-      font-size: 16px;
-      transition: background-color 0.2s ease;
-    }
-    .footer-bar button:hover {
-      background: #e04343;
-    }
+    /* Уже есть, улучшим и добавим */
 
-    /* Скрываем кнопку входа в хедере на мобильных */
-    @media (max-width: 720px) {
-      #loginBtn {
-        display: none;
-      }
-    }
-
-    /* Скрываем нижнюю кнопку на больших экранах */
-    @media (min-width: 721px) {
-      .footer-bar {
-        display: none;
-      }
-    }
-
-    /* Адаптивы для остального контента */
     @media (max-width: 1024px) {
       header {
         padding: 12px 4%;
@@ -257,6 +198,7 @@
       }
     }
 
+    /* Очень маленькие экраны */
     @media (max-width: 400px) {
       header {
         padding: 10px 3%;
@@ -266,9 +208,6 @@
       }
       nav a {
         font-size: 13px;
-      }
-      #loginBtn {
-        max-width: 100%;
       }
       .hero h1 {
         font-size: 24px;
@@ -289,7 +228,7 @@
       <a href="#tracks">Работы</a>
       <a href="#contact">Контакты</a>
     </nav>
-    <button id="loginBtn">Вход</button>
+    <!-- Кнопка входа убрана -->
   </header>
 
   <section class="hero" role="region" aria-label="Главный баннер">
@@ -362,10 +301,7 @@
     </div>
   </footer>
 
-  <!-- Нижняя кнопка входа для мобильных -->
-  <div class="footer-bar">
-    <button id="loginBtnFooter">Вход</button>
-  </div>
+  <!-- Модалка входа удалена -->
 
 </body>
 </html>
